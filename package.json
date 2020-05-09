@@ -10,11 +10,14 @@
   "dependencies": {
     "next": "9.3.5",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "styled-components": "^5.1.0"
   },
   "devDependencies": {
     "@types/node": "^13.13.5",
     "@types/react": "^16.9.34",
+    "@types/styled-components": "^5.1.0",
+    "babel-plugin-styled-components": "^1.10.7",
     "husky": ">=4",
     "lint-staged": ">=10",
     "prettier": "^2.0.5",
@@ -30,6 +33,6 @@
     }
   },
   "lint-staged": {
-    "*.{ts,tsx,js,md}": "prettier --write"
+    "*.{ts,tsx,js,json,md}": "prettier --write"
   }
 }

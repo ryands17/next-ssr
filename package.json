@@ -10,7 +10,7 @@
     "test:ci": "jest --ci --coverage --maxWorkers=2"
   },
   "dependencies": {
-    "next": "9.4.2",
+    "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "styled-components": "^5.1.0"

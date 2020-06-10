@@ -29,15 +29,17 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-        env:
-          CI: true
 
       - name: Run Tests
         run: yarn test:ci
-        env:
-          CI: true
+
+      - name: Use cached node_modules
+        uses: actions/cache@v1
+        with:
+          path: .next
+          key: nextBuild-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            nextBuild-
 
       - name: Build
         run: yarn build
-        env:
-          CI: true

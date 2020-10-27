@@ -1,0 +1,25 @@
+{
+  "extends": ["config:base"],
+  "masterIssue": true,
+  "automerge": true,
+  "schedule": ["every weekend"],
+  "ignoreDeps": ["react-scripts"],
+  "packageRules": [
+    {
+      "packagePatterns": ["react", "react-dom"],
+      "groupName": "react-deps"
+    },
+    {
+      "packagePatterns": ["^@types/", "typesync"],
+      "groupName": "ts-types"
+    },
+    {
+      "packagePatterns": ["@testing-library*", "jest"],
+      "groupName": "testing-libs"
+    },
+    {
+      "packagePatterns": ["prettier", "husky", "lint-staged"],
+      "groupName": "formatters"
+    }
+  ]
+}

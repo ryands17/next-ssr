@@ -2,7 +2,7 @@
   "extends": ["config:base"],
   "masterIssue": true,
   "automerge": true,
-  "schedule": ["every weekend"],
+  "schedule": ["every monday"],
   "ignoreDeps": ["react-scripts"],
   "packageRules": [
     {
@@ -20,6 +20,10 @@
     {
       "packagePatterns": ["prettier", "husky", "lint-staged"],
       "groupName": "formatters"
+    },
+    {
+      "packagePatterns": ["tailwindcss", "postcss", "autoprefixer"],
+      "groupName": "css"
     }
   ]
 }

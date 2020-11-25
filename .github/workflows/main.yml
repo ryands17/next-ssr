@@ -20,7 +20,7 @@ jobs:
           node-version: 12.x
 
       - name: Use cached node_modules
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: nodeModules-${{ hashFiles('**/yarn.lock') }}
@@ -28,7 +28,7 @@ jobs:
             nodeModules-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - name: Run Tests
         run: yarn test:ci

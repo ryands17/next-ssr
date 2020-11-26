@@ -1,4 +1,4 @@
-import { Card as CardType } from 'types/Card'
+import { Card as CardType } from 'types'
 
 export const Card: React.FC<{ card: CardType }> = ({ card }) => {
   return (

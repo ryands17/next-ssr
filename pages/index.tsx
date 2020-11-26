@@ -2,7 +2,7 @@ import { Footer, Header } from 'components/Boundaries'
 import { Card } from 'components/Card'
 import { Grid } from 'components/Grid'
 import Head from 'next/head'
-import { Cards } from 'types/Card'
+import { Cards } from 'types'
 
 const cardItems: Cards = [
   {
@@ -29,7 +29,7 @@ const cardItems: Cards = [
   },
 ]
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center">
       <Head>
@@ -51,3 +51,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home

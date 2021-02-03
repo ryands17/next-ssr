@@ -1,10 +1,13 @@
 {
   "extends": ["config:base"],
   "masterIssue": true,
-  "automerge": true,
   "schedule": ["every monday"],
   "ignoreDeps": ["react-scripts"],
   "packageRules": [
+    {
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
     {
       "packagePatterns": ["react", "react-dom"],
       "groupName": "react-deps"

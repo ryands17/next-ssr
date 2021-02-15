@@ -34,7 +34,7 @@ jobs:
         run: yarn test:ci
 
       - name: Use cached node_modules
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: .next
           key: nextBuild-${{ hashFiles('**/yarn.lock') }}

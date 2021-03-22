@@ -18,7 +18,7 @@
     "@testing-library/jest-dom": "5.11.9",
     "@testing-library/react": "11.2.5",
     "@types/autoprefixer": "10.2.0",
-    "@types/jest": "26.0.20",
+    "@types/jest": "26.0.21",
     "@types/node": "14.14.35",
     "@types/prettier": "2.2.3",
     "@types/react": "17.0.3",

@@ -14,10 +14,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Use Node 12
+      - name: Setup Node 14
         uses: actions/setup-node@v2
         with:
-          node-version: 12.x
+          node-version: 14.x
 
       - name: Use cached node_modules
         uses: actions/cache@v2
@@ -30,16 +30,16 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
 
-      - name: Run Tests
-        run: yarn test:ci
+      - name: Run Lint and Tests
+        run: yarn lint && yarn test:ci
 
       - name: Use cached node_modules
         uses: actions/cache@v2
         with:
           path: .next
-          key: nextBuild-${{ hashFiles('**/yarn.lock') }}
+          key: next-build-${{ github.sha }}
           restore-keys: |
-            nextBuild-
+            next-build-
 
       - name: Build
         run: yarn build

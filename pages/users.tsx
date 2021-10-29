@@ -1,31 +1,42 @@
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next'
-import { Users as UsersType } from 'types'
+import type {
+  GetServerSideProps,
+  InferGetServerSidePropsType,
+  NextPage,
+} from 'next'
+import type { Users as UsersType } from 'types'
 
 export const getServerSideProps: GetServerSideProps<{
-  users: UsersType
-}> = async (context) => {
-  const data = await fetch('https://jsonplaceholder.typicode.com/users')
-  const users = await data.json()
+  users: UsersType | null
+}> = async () => {
+  try {
+    const data = await fetch('https://jsonplaceholder.typicode.com/users')
+    const users = await data.json()
 
-  return {
-    props: { users },
+    return {
+      props: { users },
+    }
+  } catch (error) {
+    return {
+      props: { users: null },
+    }
   }
 }
 
-const Users: React.FC<
-  InferGetServerSidePropsType<typeof getServerSideProps>
-> = ({ users }) => {
-  return (
-    <ul>
-      {users.map((user) => (
-        <li key={user.id}>
-          {user.name} → {user.email}
-          <br />
-          <strong>{user.website}</strong>
-        </li>
-      ))}
-    </ul>
-  )
-}
+const Users: NextPage<InferGetServerSidePropsType<typeof getServerSideProps>> =
+  ({ users }) => {
+    return (
+      <div className="m-4">
+        <ul>
+          {users?.map((user) => (
+            <li key={user.id} className="pb-2">
+              {user.name} =&gt; {user.email}
+              <br />
+              <strong>{user.website}</strong>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
 
 export default Users

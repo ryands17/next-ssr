@@ -1,10 +1,9 @@
-import App from 'next/app'
-import React from 'react'
+import type { AppProps } from 'next/app'
 import '../styles/global.css'
 
-export default class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props
-    return <Component {...pageProps} />
-  }
+const App = (props: AppProps) => {
+  const { Component, pageProps } = props
+  return <Component {...pageProps} />
 }
+
+export default App

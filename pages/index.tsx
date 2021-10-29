@@ -1,7 +1,8 @@
+import Head from 'next/head'
+import type { NextPage } from 'next'
 import { Footer, Header } from 'components/Boundaries'
 import { Card } from 'components/Card'
 import { Grid } from 'components/Grid'
-import Head from 'next/head'
 import { Cards } from 'types'
 
 const cardItems: Cards = [
@@ -21,15 +22,13 @@ const cardItems: Cards = [
     description: 'Discover and deploy boilerplate example Next.js projects.',
   },
   {
-    link:
-      'https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app',
-    title: 'Deploy →',
-    description:
-      'Instantly deploy your Next.js site to a public URL with Vercel.',
+    link: '/users',
+    title: 'View Users →',
+    description: 'Switch to the Server rendered `Users` Page',
   },
 ]
 
-const Home = () => {
+const Home: NextPage = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center">
       <Head>

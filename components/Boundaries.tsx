@@ -1,3 +1,5 @@
+import { Image } from './Image'
+
 export const Footer = () => {
   return (
     <footer className="w-full h-24 flex justify-center items-center border border-solid border-gray-200">
@@ -8,7 +10,13 @@ export const Footer = () => {
         className="flex justify-center items-center"
       >
         Powered by{' '}
-        <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
+        <Image
+          src="/vercel.svg"
+          alt="Vercel Logo"
+          height="64"
+          width="64"
+          className="ml-4"
+        />
       </a>
     </footer>
   )

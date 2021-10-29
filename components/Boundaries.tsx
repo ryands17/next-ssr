@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { Image } from './Image'
 
 export const Footer = () => {
@@ -27,12 +28,15 @@ export const Header = () => {
     <>
       <h1 className="m-0 leading-tight text-6xl">
         Learn{' '}
-        <a
-          href="https://nextjs.org"
-          className="text-blue-600 hover:underline focus:underline active:underline"
-        >
-          Next.js!
-        </a>
+        <Link href="https://nextjs.org">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline focus:underline active:underline"
+          >
+            Next.js!
+          </a>
+        </Link>
       </h1>
 
       <p className="text-center leading-normal text-2xl">

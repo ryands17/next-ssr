@@ -1,8 +1,8 @@
 {
   "extends": ["config:base"],
   "masterIssue": true,
-  "schedule": ["every monday"],
-  "ignoreDeps": ["react-scripts"],
+  "schedule": ["on the 3 day of the month"],
+  "ignoreDeps": ["eslint"],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],

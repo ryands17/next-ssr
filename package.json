@@ -19,7 +19,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "12.0.4",
     "@sls-next/lambda-at-edge": "3.6.0",
-    "@testing-library/jest-dom": "5.15.1",
+    "@testing-library/jest-dom": "5.16.0",
     "@testing-library/react": "12.1.2",
     "@types/autoprefixer": "10.2.0",
     "@types/jest": "27.0.3",

@@ -12,12 +12,12 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "next": "12.1.5",
+    "next": "12.1.6",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "12.1.5",
+    "@next/bundle-analyzer": "12.1.6",
     "@sls-next/lambda-at-edge": "3.7.0",
     "@testing-library/jest-dom": "5.16.3",
     "@testing-library/react": "12.1.4",
@@ -31,7 +31,7 @@
     "autoprefixer": "10.4.7",
     "babel-jest": "27.5.1",
     "eslint": "7.32.0",
-    "eslint-config-next": "12.1.5",
+    "eslint-config-next": "12.1.6",
     "husky": "7.0.4",
     "jest": "27.5.1",
     "lint-staged": "12.3.7",
